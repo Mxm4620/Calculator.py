@@ -1,22 +1,24 @@
-from tkinter import *
+#calculator
+import math
 
-count = ""
+number_1 = input("Press the first number:")
+number_2 = input("Press the second number:")
+sign = input("Put right sing what you need in your math analys(+ - * /):")
+result_plus = int(number_1) + int(number_2)
+result_minus = int(number_1) - int(number_2)
+result_multiply = int(number_1) * int(number_2)
+result_divide = int(number_1) / int(number_2)
 
-def submit():
-    username = entry.get()
-    print(username)
+plus = "+"
+minus = "-"
+multiply = "*"
+divide = "/"
 
-def click(num):
-    entry.insert(Tk.END, num)
-
-window = Tk()
-
-entry = Entry(window,bg="black")
-entry.pack()
-
-button_submit = Button(window,text="=",command=submit)
-button_submit.pack()
-
-button_1 = Button(window,text="1",command=lambda: 1)
-button_1.pack(side=LEFT)
-window.mainloop()
+if sign == plus:
+    print(result_plus)
+elif sign == minus:
+    print(result_minus)
+elif sign == multiply:
+    print(result_multiply)
+elif sign == divide:
+    print(result_divide)
